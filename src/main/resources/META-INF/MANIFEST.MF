@@ -1,0 +1,100 @@
+Manifest-Version: 1.0
+Bnd-LastModified: 1541688761693
+Build-Jdk: 1.8.0_171
+Built-By: chooliyip
+Bundle-Category: jahia-module
+Bundle-ClassPath: .,jackson-jaxrs-base-2.8.9.jar,jackson-jaxrs-json-prov
+ ider-2.8.9.jar,jackson-datatype-jdk8-2.8.9.jar,jackson-dataformat-yaml-
+ 2.8.9.jar,snakeyaml-1.17.jar,jackson-module-jaxb-annotations-2.8.9.jar,
+ gson-2.2.4.jar
+Bundle-Description: This is the custom module (contentful integration) f
+ or handling all contentful API integration
+Bundle-DocURL: http://www.jahia.com
+Bundle-ManifestVersion: 2
+Bundle-Name: Contentful Integration
+Bundle-SymbolicName: contentful-connector
+Bundle-Vendor: Jahia Solutions Group SA
+Bundle-Version: 0.0.1.SNAPSHOT
+Created-By: Apache Maven Bundle Plugin
+Dynamic-ImportPackage: *
+Embedded-Artifacts: jackson-jaxrs-base-2.8.9.jar;g="com.fasterxml.jackso
+ n.jaxrs";a="jackson-jaxrs-base";v="2.8.9",jackson-jaxrs-json-provider-2
+ .8.9.jar;g="com.fasterxml.jackson.jaxrs";a="jackson-jaxrs-json-provider
+ ";v="2.8.9",jackson-datatype-jdk8-2.8.9.jar;g="com.fasterxml.jackson.da
+ tatype";a="jackson-datatype-jdk8";v="2.8.9",jackson-dataformat-yaml-2.8
+ .9.jar;g="com.fasterxml.jackson.dataformat";a="jackson-dataformat-yaml"
+ ;v="2.8.9",snakeyaml-1.17.jar;g="org.yaml";a="snakeyaml";v="1.17",jacks
+ on-module-jaxb-annotations-2.8.9.jar;g="com.fasterxml.jackson.module";a
+ ="jackson-module-jaxb-annotations";v="2.8.9",gson-2.2.4.jar;g="com.goog
+ le.code.gson";a="gson";v="2.2.4"
+Implementation-Title: Contentful Integration
+Implementation-URL: http://www.jahia.com
+Implementation-Vendor: Jahia Solutions Group SA
+Implementation-Version: 0.0.1-SNAPSHOT
+Import-Package: com.fasterxml.jackson.annotation;version="[2.8,3)",com.f
+ asterxml.jackson.core;version="[2.8,3)",com.fasterxml.jackson.core.base
+ ;version="[2.8,3)",com.fasterxml.jackson.core.format;version="[2.8,3)",
+ com.fasterxml.jackson.core.io;version="[2.8,3)",com.fasterxml.jackson.c
+ ore.json;version="[2.8,3)",com.fasterxml.jackson.core.util;version="[2.
+ 8,3)",com.fasterxml.jackson.databind;version="[2.8,3)",com.fasterxml.ja
+ ckson.databind.annotation;version="[2.8,3)",com.fasterxml.jackson.datab
+ ind.cfg;version="[2.8,3)",com.fasterxml.jackson.databind.deser;version=
+ "[2.8,3)",com.fasterxml.jackson.databind.deser.std;version="[2.8,3)",co
+ m.fasterxml.jackson.databind.introspect;version="[2.8,3)",com.fasterxml
+ .jackson.databind.jsonFormatVisitors;version="[2.8,3)",com.fasterxml.ja
+ ckson.databind.jsontype;version="[2.8,3)",com.fasterxml.jackson.databin
+ d.jsontype.impl;version="[2.8,3)",com.fasterxml.jackson.databind.node;v
+ ersion="[2.8,3)",com.fasterxml.jackson.databind.ser;version="[2.8,3)",c
+ om.fasterxml.jackson.databind.ser.impl;version="[2.8,3)",com.fasterxml.
+ jackson.databind.ser.std;version="[2.8,3)",com.fasterxml.jackson.databi
+ nd.type;version="[2.8,3)",com.fasterxml.jackson.databind.util;version="
+ [2.8,3)",javax.activation,javax.ws.rs,javax.ws.rs.core,javax.ws.rs.ext,
+ javax.xml.bind,javax.xml.bind.annotation,javax.xml.bind.annotation.adap
+ ters,javax.xml.parsers,org.w3c.dom,com.ning.http.client;version="[1.9,2
+ )",graphql.annotations.annotationTypes;version="[6.0,7)",javax.net.ssl,
+ org.jahia.modules.graphql.provider.dxm;version="[1.0,2)",org.slf4j;vers
+ ion="[1.7,2)",javax.jcr;version="[2.0,3)",org.jahia.services.content.no
+ detypes,org.jahia.taglibs;version="[7.2,8)",org.jahia.services.content,
+ org.jahia.taglibs.template;version="[7.2,8)",org.jahia.taglibs.template
+ .pager;version="[7.2,8)",org.jahia.services.seo,org.jahia.taglibs.templ
+ ate.layoutmanager;version="[7.2,8)",org.jahia.services.content.decorato
+ r,org.apache.commons.lang.math;version="[2.6,3)",org.apache.commons.lan
+ g;version="[2.6,3)",org.apache.naming.java,org.apache.commons.id,org.ap
+ ache.taglibs.standard.tag.rt.core,javax.servlet.http;version="[3.0,4)",
+ org.apache.taglibs.standard.tag.common.core,org.jahia.defaults.config.s
+ pring,org.jahia.exceptions,org.jahia.taglibs.query;version="[7.2,8)",or
+ g.apache.taglibs.standard.functions,org.jahia.utils,org.jahia.taglibs.j
+ cr.query;version="[7.2,8)",org.jahia.taglibs.user;version="[7.2,8)",org
+ .jahia.taglibs.jcr;version="[7.2,8)",org.jahia.data.viewhelper.principa
+ l,org.jahia.services.render,org.jahia.taglibs.template.include;version=
+ "[7.2,8)",org.jahia.taglibs.functions;version="[7.2,8)",org.jahia.tagli
+ bs.template.gwt;version="[7.2,8)",org.jahia.services,org.apache.taglibs
+ .standard.tei,org.jahia.taglibs.jcr.node;version="[7.2,8)"
+Jahia-Depends: default
+Jahia-Download-Sources-Available: false
+Jahia-GroupId: org.jahia.modules
+Jahia-Module-Type: module
+Jahia-Required-Version: 7.2.3.1
+Jahia-Source-Control-Connection: scm:git:git@github.com:Jahia/dxm-privat
+ e.git/jahia-modules/contentful-connector
+Jahia-Source-Control-DeveloperConnection: scm:git:git@github.com:Jahia/d
+ xm-private.git/jahia-modules/contentful-connector
+Jahia-Source-Control-Tag: JAHIA_7_2_3_1
+Jahia-Source-Folders: /git/contentful-connector
+Jahia-Static-Resources: /css,/icons,/images,/img,/javascript
+Originally-Created-By: Apache Maven Bundle Plugin
+Provide-Capability: com.jahia.services.content;nodetypes:List<String>="j
+ cnt:contentfulBlog",com.jahia.modules.dependencies;moduleIdentifier=con
+ tentful-connector,com.jahia.modules.dependencies;moduleIdentifier="Cont
+ entful Integration"
+Require-Capability: com.jahia.services.content;filter:="(nodetypes=jmix:
+ accessControllableContent)",com.jahia.services.content;filter:="(nodety
+ pes=jmix:droppableContent)",com.jahia.services.content;filter:="(nodety
+ pes=jnt:content)",com.jahia.modules.dependencies;filter:="(moduleIdenti
+ fier=default)",osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Service-Component: OSGI-INF/org.jahia.modules.contentful.graphql.GraphQL
+ ExtensionProvider.xml
+Specification-Title: Contentful Integration
+Specification-Vendor: Jahia Solutions Group SA
+Specification-Version: 0.0.1-SNAPSHOT
+Tool: Bnd-2.3.0.201703021050
