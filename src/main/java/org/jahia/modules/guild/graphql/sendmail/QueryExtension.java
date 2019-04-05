@@ -3,6 +3,7 @@ package org.jahia.modules.guild.graphql.sendmail;
 import graphql.annotations.annotationTypes.*;
 import org.jahia.modules.graphql.provider.dxm.DXGraphQLProvider;
 import org.jahia.modules.guild.graphql.models.GraphQLMailStub;
+import org.jahia.services.mail.MailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,8 @@ import org.slf4j.LoggerFactory;
 public class QueryExtension {
 
     private static Logger logger = LoggerFactory.getLogger(QueryExtension.class);
+
+    private MailService mailService;
 
     @GraphQLField
     public static GraphQLMailStub sendmail(@GraphQLNonNull
@@ -25,9 +28,17 @@ public class QueryExtension {
 
         logger.debug("Expose mail sending service, receiver: {}, subject {} ", receiver, subject);
 
-        //TODO expose DX core mail service
+        String textBody = "test email is sent for guild backend practice - sendmail API";
 
-        return new GraphQLMailStub();
+        //TODO expose DX core mail service
+        MailService mailService = MailService.getInstance();
+        if (mailService==null) {
+            return new GraphQLMailStub("ERROR", false, textBody);
+        }
+        mailService.sendMessage("cyip@jahia.com", receiver, null, null, subject, textBody, null);
+
+        return new GraphQLMailStub("OK", mailService.isEnabled(), textBody);
+
     }
 
 }

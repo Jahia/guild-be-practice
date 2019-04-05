@@ -12,14 +12,18 @@ public class GraphQLMailStub {
     private String status;
 
     @GraphQLField
+    private boolean isMailServiceEnabled;
+
+    @GraphQLField
     private String payload;
 
     public GraphQLMailStub(){
         //void
     }
 
-    public GraphQLMailStub(String status, String payload){
+    public GraphQLMailStub(String status, boolean mailServiceEnable, String payload){
         this.status = status;
+        this.isMailServiceEnabled = mailServiceEnable;
         this.payload = payload;
     }
 
@@ -27,5 +31,6 @@ public class GraphQLMailStub {
     public String getPayload() {
         return this.payload;
     }
+    public boolean isMailServiceEnabled() { return this.isMailServiceEnabled; }
 
 }
